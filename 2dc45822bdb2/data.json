@@ -617,12 +617,95 @@
    "end": "2026-11-09",
    "property": "681 Mountain Laurel",
    "who": "Jorge",
-   "task": "Driveway pressure wash in progress (first photo 10:48 AM, 47 min so far). Stone is very black; sealant goes on after the wash.",
+   "task": "Driveway pressure wash, day one: stone around the back of the house and the planter stone cleaned, floors washed. The lower part is left for Nov 10 (per Jorge). Sealant goes on after the wash. Est. 6 h 32 min (first photo 10:48 AM, last 5:20 PM).",
    "status": "Pending",
    "source": "CompanyCam",
    "id": "j55",
    "urgent": false,
-   "short": "Driveway pressure wash in progress; seal after"
+   "short": "Driveway pressure wash: lower part left for Nov 10; seal after"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Some stains on the stone could not be removed; they are stuck on. Jorge did what he could.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j56",
+   "urgent": false,
+   "short": "Stone stains could not be removed"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "1375 Sage",
+   "who": "Kyle",
+   "task": "Locksmith says the lock mechanism is fixed. Confirm everything is done properly, the house is locked, and find all keys, including the locksmith's key. Make three labeled key sets plus copies for the ADU and text Rhys (per Luis, Nov 9).",
+   "status": "Pending",
+   "source": "Google Voice",
+   "id": "j57",
+   "urgent": false,
+   "short": "Locksmith fixed lock: confirm, find all keys, label three sets"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "1375 Sage",
+   "who": "Kyle",
+   "task": "Tuck the front heat tape back into the gutter. Change the garage code and ask whether each person can get their own (per Luis, Nov 9).",
+   "status": "Pending",
+   "source": "Google Voice",
+   "id": "j58",
+   "urgent": false,
+   "short": "Tuck heat tape in gutter; change garage code"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "426 W Hallam",
+   "who": "Kyle",
+   "task": "Gutters approved. Schedule them (per Luis, Nov 9).",
+   "status": "Pending",
+   "source": "Google Voice",
+   "id": "j59",
+   "urgent": false,
+   "short": "Gutters approved: schedule them"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "Team",
+   "who": "Rhys, all staff",
+   "task": "Patios need to be shoveled at all properties (Rhys text, Nov 9 evening).",
+   "status": "Pending",
+   "source": "Google Voice",
+   "id": "j60",
+   "urgent": false,
+   "short": "Shovel patios at all properties"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "210 S W End",
+   "who": "Rhys, Kyle",
+   "task": "Burglar alarm area was wet inside, like fresh tracks. Kyle confirmed it was the hot tub person (Nov 9 evening). No issue.",
+   "status": "Done",
+   "source": "Google Voice",
+   "id": "j61",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "Property not named",
+   "who": "Glass Guru (Chase)",
+   "task": "Estimate for sealing the gaps in the windows received Nov 9 and sent to Rhys. Operable windows would become fixed; the vendor says the clients agreed.",
+   "status": "Pending",
+   "source": "Gmail",
+   "id": "j62",
+   "urgent": false,
+   "short": "Window gap sealing estimate: with Rhys"
   }
  ],
  "activity": [
@@ -958,9 +1041,9 @@
    "date": "2026-11-09",
    "property": "681 Mountain Laurel",
    "person": "Jorge",
-   "photos": 4,
+   "photos": 24,
    "first": "10:48 AM",
-   "last": "11:35 AM"
+   "last": "5:20 PM"
   }
  ],
  "properties": [
@@ -978,11 +1061,11 @@
   {
    "property": "681 Mountain Laurel",
    "city": "",
-   "photos": 221,
+   "photos": 241,
    "last_activity": "2026-11-09",
    "days_quiet": 0,
    "status": "Active",
-   "photos_14d": 84,
+   "photos_14d": 104,
    "days_worked": 7,
    "crew": "Damaris, Jorge, Rhys"
   },
@@ -1258,12 +1341,10 @@
   }
  ],
  "meta": {
-  "generated": "2026-11-10T05:12:10Z",
+  "generated": "2026-11-10T07:38:31Z",
   "as_of": "2026-11-09",
-  "voice_read": false,
-  "notes": [
-   "Google Voice was not read for this update."
-  ],
+  "voice_read": true,
+  "notes": [],
   "non_properties": [
    "Team",
    "Property not named"
