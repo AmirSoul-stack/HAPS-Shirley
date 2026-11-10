@@ -355,6 +355,7 @@ html, body { margin: 0; background: #1C1C1A; }
     if (text != null) n.textContent = text;
     return n;
   };
+  var wkdays = function (last) { var out = [], d = new Date(last + 'T00:00:00Z'); while (out.length < 7) { var w = d.getUTCDay(); if (w !== 0 && w !== 6) out.unshift(d.toISOString().slice(0, 10)); d = new Date(d.getTime() - 86400000); } return out; };
   var keyOf = function (r, keys) {
     return keys.length === 1 ? String(r[keys[0]]) : keys.map(function (k) { return encodeURIComponent(String(r[k])); }).join(',');
   };
@@ -366,11 +367,11 @@ html, body { margin: 0; background: #1C1C1A; }
     fn: function (jobs, activity, properties) {
       var c = function (st) { return jobs.filter(function (j) { return j.status === st; }).length; };
       var last = activity.reduce(function (m, a) { return a.date > m ? a.date : m; }, window.__RUNDATE || '');
-      var ws = new Date(new Date(last + 'T00:00:00Z').getTime() - 6 * 86400000).toISOString().slice(0, 10);
+      var wd = wkdays(last); last = wd[6]; var ws = wd[0];
       var uniq = function (arr) { return arr.filter(function (v, i) { return arr.indexOf(v) === i; }); };
       var open = jobs.filter(function (j) { return j.status === 'Pending'; }).map(function (j) { return j.property; });
-      var wa = activity.filter(function (a) { return a.date >= ws && a.date <= last; });
-      var wj = jobs.filter(function (j) { return j.date >= ws && j.date <= last; });
+      var wa = activity.filter(function (a) { return wd.indexOf(a.date) >= 0; });
+      var wj = jobs.filter(function (j) { return wd.indexOf(j.date) >= 0; });
       var visited = uniq(wa.map(function (a) { return a.property; }).concat(wj.filter(function (j) { return j.status === 'Done' && j.source !== 'CompanyCam'; }).map(function (j) { return j.property; })));
       return [{
         as_of: last || null, week_start: ws,
@@ -395,11 +396,10 @@ html, body { margin: 0; background: #1C1C1A; }
       var last = activity.reduce(function (m, a) { return a.date > m ? a.date : m; }, window.__RUNDATE || '');
       if (!last) return [];
       var out = [];
-      for (var i = 6; i >= 0; i--) {
-        var d = new Date(new Date(last + 'T00:00:00Z').getTime() - i * 86400000);
-        var dow = d.getUTCDay();
-        out.push({ date: d.toISOString().slice(0, 10), dow: D[dow], day: d.getUTCDate(), weekend: dow === 0 || dow === 6 });
-      }
+      wkdays(last).forEach(function (s) {
+        var d = new Date(s + 'T00:00:00Z'), dow = d.getUTCDay();
+        out.push({ date: s, dow: D[dow], day: d.getUTCDate(), weekend: false });
+      });
       return out;
     }
   });
@@ -412,8 +412,8 @@ html, body { margin: 0; background: #1C1C1A; }
       var last = activity.reduce(function (m, a) { return a.date > m ? a.date : m; }, window.__RUNDATE || '');
       if (!last) return [];
       var days = [];
-      for (var i = 6; i >= 0; i--) days.push(new Date(new Date(last + 'T00:00:00Z').getTime() - i * 86400000).toISOString().slice(0, 10));
-      var inWeek = function (d) { return d >= days[0] && d <= last; };
+      days = wkdays(last); last = days[6];
+      var inWeek = function (d) { return days.indexOf(d) >= 0; };
       var short = function (p) {
         return String(p).replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+(Road|Rd|Drive|Dr|Court|Ct|Lane|Ln|Avenue|Ave|Street|St|Way|Circle|Cir|Place|Pl)\.?$/i, '').trim();
       };
@@ -546,14 +546,11 @@ html, body { margin: 0; background: #1C1C1A; }
       var days = Object.keys(totals).sort();
       if (!days.length) return [];
       var out = [];
-      var lastDay = days[days.length - 1] > (window.__RUNDATE || '') ? days[days.length - 1] : window.__RUNDATE;
-      var end = new Date(lastDay + 'T00:00:00Z');
-      var d = new Date(end.getTime() - 6 * 86400000);
-      while (d <= end) {
-        var s = d.toISOString().slice(0, 10);
+      var lastDay = days[days.length - 1] > (window.__RUNDATE || '') ? days[days.length - 1] : (window.__RUNDATE || '');
+      wkdays(lastDay).forEach(function (s) {
+        var d = new Date(s + 'T00:00:00Z');
         out.push({ date: s, label: M[d.getUTCMonth()] + ' ' + d.getUTCDate(), photos: totals[s] || 0 });
-        d = new Date(d.getTime() + 86400000);
-      }
+      });
       return out;
     }
   });
