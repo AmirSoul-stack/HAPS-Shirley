@@ -143,6 +143,7 @@ def build(raw_dir, out_path, voice_read=None, notes=None, now=None):
     out['meta'] = {
         'generated': now.strftime('%Y-%m-%dT%H:%M:%SZ'),
         'as_of': max(dates) if dates else None,
+        'run_date': now.replace(tzinfo=datetime.timezone.utc).astimezone(__import__('zoneinfo').ZoneInfo('America/Denver')).strftime('%Y-%m-%d'),
         'voice_read': voice_read,
         'notes': notes or [],
         'non_properties': NONPROPERTY,
