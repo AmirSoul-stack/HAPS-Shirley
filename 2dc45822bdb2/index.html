@@ -185,6 +185,9 @@ html, body { margin: 0; background: #1C1C1A; }
   .sj-wk-p { font-size: 16px; }
   .sj-top { display: block; }
 }
+.sj-wk-what [hidden] { display: none; }
+.sj-wk-what .more-btn { background: none; border: 0; padding: 0; margin: 0 .9rem 0 0; font: inherit; color: #ffd2a8; text-decoration: underline; cursor: pointer; }
+.sj-wk-what .more-btn:focus-visible { outline: 2px solid #F3872C; outline-offset: 2px; }
 </style>
 </head><body>
 <div class="sj">
@@ -590,9 +593,19 @@ html, body { margin: 0; background: #1C1C1A; }
       var room = Math.max(4 - shown, 1);
       r.done_items.slice(0, room).forEach(function (t) { what.append(el('span', 'ok', t)); });
       if (r.done_items.length > room) {
-        var m = el('span', 'more', '+' + (r.done_items.length - room) + ' more done');
-        m.title = r.done_items.slice(room).join('; ');
+        var rest = r.done_items.slice(room);
+        var m = el('button', 'more more-btn', '+' + rest.length + ' more done');
+        m.type = 'button';
+        m.setAttribute('aria-expanded', 'false');
+        var extra = rest.map(function (t) { var x = el('span', 'ok', t); x.hidden = true; return x; });
+        m.addEventListener('click', function () {
+          var open = m.getAttribute('aria-expanded') === 'true';
+          extra.forEach(function (x) { x.hidden = open; });
+          m.setAttribute('aria-expanded', String(!open));
+          m.textContent = open ? '+' + rest.length + ' more done' : 'Show fewer';
+        });
         what.append(m);
+        extra.forEach(function (x) { what.append(x); });
       }
       if (what.childNodes.length) card.append(what);
       box.append(card);
