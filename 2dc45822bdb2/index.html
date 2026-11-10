@@ -171,7 +171,10 @@ html, body { margin: 0; background: #1C1C1A; }
 .fb-chip { display:inline-block; padding:.6rem 1rem; font:700 .95rem var(--font-anthropic-sans); color:#fff; background:var(--ch); border-radius:999px; text-decoration:none; }
 .fb-chip.n { background:var(--tan); }
 .fb-opts[hidden], .fb-add[hidden] { display:none; }
-.fb-add { display:inline-block; margin:1rem 0 0; padding:.6rem 1.1rem; font:700 .95rem var(--font-anthropic-sans); color:var(--bo); background:#fff; border:2px solid var(--bo); border-radius:999px; text-decoration:none; }
+.fb-add { display:flex; align-items:center; justify-content:space-between; gap:.8rem; margin:.2rem 0 1.2rem; padding:.9rem 1.2rem; font:800 1.2rem var(--font-anthropic-sans); color:#fff; background:var(--bo); border-radius:14px; text-decoration:none; }
+.fb-add small { font-size:.85rem; font-weight:600; color:#fff; opacity:.9; }
+.fb-add:hover { background:#b84a12; }
+.fb-add:focus-visible { outline:3px solid var(--or); outline-offset:2px; }
 .fl-btn { margin:.9rem 0 0; padding:.7rem 1.3rem; font:700 1rem var(--font-anthropic-sans); color:#fff; background:var(--bo); border:0; border-radius:999px; cursor:pointer; }
 .fl-btn::after { content:" \25BE"; }
 .fl-btn[aria-expanded="true"]::after { content:" \25B4"; }
@@ -227,10 +230,10 @@ html, body { margin: 0; background: #1C1C1A; }
   <h2 class="fl-title" id="field-list">Field list</h2>
   <button type="button" class="fl-btn" aria-expanded="false" aria-controls="fl-body" data-fl-toggle>Field list</button>
   <div id="fl-body" hidden>
+  <a class="fb-add" data-fb-add href="#" hidden>+ Add a job <small>Tap to text Luis</small></a>
   <p class="fl-sum" data-draw="fl-summary">—</p>
   <p class="fl-asof">Time is estimated from first to last CompanyCam photo at the property. Standards are starters and can be adjusted.</p>
   <div data-draw="fl-list" data-source="listrows"></div>
-  <a class="fb-add" data-fb-add href="#" hidden>+ Add a job (text Luis)</a>
   <div class="fl-lg" aria-label="Legend">
     <span><i class="fl-box done">&#10003;</i>done</span>
     <span><i class="fl-box doing"></i>in progress</span>
