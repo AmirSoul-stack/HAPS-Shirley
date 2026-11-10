@@ -188,6 +188,27 @@ html, body { margin: 0; background: #1C1C1A; }
 .sj-wk-what [hidden] { display: none; }
 .sj-wk-what .more-btn { background: none; border: 0; padding: 0; margin: 0 .9rem 0 0; font: inherit; color: #ffd2a8; text-decoration: underline; cursor: pointer; }
 .sj-wk-what .more-btn:focus-visible { outline: 2px solid #F3872C; outline-offset: 2px; }
+
+.sj-p.sj-click { cursor: pointer; transition: transform .12s ease, box-shadow .12s ease; }
+.sj-p.sj-click:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(28,28,26,.18); }
+.sj-p.sj-click:focus-visible { outline: 3px solid #F3872C; outline-offset: 2px; }
+.sj-ov { position: fixed; inset: 0; z-index: 50; background: rgba(28,28,26,.72); display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.sj-ov[hidden] { display: none; }
+.sj-dlg { background: #fff; color: #1C1C1A; width: min(38rem, 100%); max-height: 86vh; overflow: auto; border-radius: 14px; border-top: 8px solid #D45917; padding: 1rem 1.2rem 1.3rem; font-family: var(--font-anthropic-sans); }
+.sj-dlg-h { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: .6rem; }
+.sj-dlg-h h3 { margin: 0; font-size: 1.6rem; line-height: 1.1; font-weight: 800; }
+.sj-dlg-h p { margin: .25rem 0 0; font-size: 14px; color: #6B655C; }
+.sj-dlg-x { flex: 0 0 auto; background: #1C1C1A; color: #fff; border: 0; border-radius: 999px; padding: .4rem 1rem; font: 700 14px var(--font-anthropic-sans); cursor: pointer; }
+.sj-dlg-x:focus-visible { outline: 3px solid #F3872C; outline-offset: 2px; }
+.sj-dlg-s { margin-top: 1rem; }
+.sj-dlg-s h4 { margin: 0 0 .35rem; padding-bottom: .2rem; font-size: 1rem; font-weight: 800; border-bottom: 3px solid #B38C66; }
+.sj-dlg-s h4.sj-dlg-o { border-bottom-color: #D45917; color: #D45917; }
+.sj-dlg-s h4.sj-dlg-p { border-bottom-color: #F3872C; }
+.sj-dlg-i { display: grid; grid-template-columns: 6.2rem 1fr; gap: .1rem .8rem; padding: .5rem 0; border-bottom: 1px solid #E8E2D8; font-size: 15px; }
+.sj-dlg-i b { color: #B38C66; font-weight: 700; white-space: nowrap; }
+.sj-dlg-i small { grid-column: 2; color: #6B655C; font-size: 13px; }
+.sj-dlg-none { color: #6B655C; }
+@media (max-width: 30rem) { .sj-dlg-i { grid-template-columns: 1fr; } .sj-dlg-i small { grid-column: 1; } }
 </style>
 </head><body>
 <div class="sj">
@@ -244,7 +265,7 @@ html, body { margin: 0; background: #1C1C1A; }
   <section class="sj-band sj-cream">
     <p class="sj-kick">Property by property</p>
     <h2 class="sj-h">Where we are working, and where we are not</h2>
-    <p class="sj-sub">Longer bar, more photos in the last two weeks. Faded tiles have had no activity for 15 days or more.</p>
+    <p class="sj-sub">Longer bar, more photos in the last two weeks. Faded tiles have had no activity for 15 days or more. Click a property to see its tasks.</p>
     <div class="sj-legend"><span class="l-active">Active: activity in the last 3 days</span><span class="l-watch">Watch: 4 to 14 days</span><span class="l-quiet">Quiet: 15 days or more</span></div>
     <div class="sj-tiles" data-draw="tiles" data-source="byprop" data-row-key="property"></div>
   </section>
@@ -650,6 +671,60 @@ html, body { margin: 0; background: #1C1C1A; }
     });
   });
 
+
+  var detailEl = null, lastFocus = null;
+  function closeDetail() { if (detailEl) { detailEl.hidden = true; document.body.style.overflow = ''; if (lastFocus && lastFocus.focus) lastFocus.focus(); } }
+  function openDetail(r) {
+    var jobs = rowsOf('jobs') || [];
+    if (!detailEl) {
+      detailEl = el('div', 'sj-ov');
+      detailEl.hidden = true;
+      detailEl.addEventListener('click', function (e) { if (e.target === detailEl) closeDetail(); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDetail(); });
+      document.body.append(detailEl);
+    }
+    lastFocus = document.activeElement;
+    var mine = jobs.filter(function (j) { return j.property === r.property; });
+    var f = function (s) { return asDate(s); };
+    var dateOf = function (j) { return j.end && j.end !== j.date ? f(j.date) + ' to ' + f(j.end) : f(j.date); };
+    var groups = [
+      ['Open', 'o', mine.filter(function (j) { return j.status === 'Pending'; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; })],
+      ['Coming up', 'p', mine.filter(function (j) { return j.status === 'Planned'; }).sort(function (a, b) { return a.date < b.date ? -1 : 1; })],
+      ['Done', 'd', mine.filter(function (j) { return j.status === 'Done'; }).sort(function (a, b) { return a.date < b.date ? 1 : -1; })]
+    ];
+    var card = el('div', 'sj-dlg');
+    card.setAttribute('role', 'dialog');
+    card.setAttribute('aria-modal', 'true');
+    card.setAttribute('aria-label', r.property + ' tasks');
+    var head = el('div', 'sj-dlg-h');
+    var ttl = el('div');
+    ttl.append(el('h3', null, r.property), el('p', null, [r.ago, r.photos_14d + (r.photos_14d === 1 ? ' photo' : ' photos') + ' in 14 days', r.crew ? 'Crew: ' + r.crew : ''].filter(Boolean).join(' \u00b7 ')));
+    var x = el('button', 'sj-dlg-x', 'Close');
+    x.type = 'button';
+    x.addEventListener('click', closeDetail);
+    head.append(ttl, x);
+    card.append(head);
+    var any = false;
+    groups.forEach(function (g) {
+      if (!g[2].length) return;
+      any = true;
+      var sec = el('div', 'sj-dlg-s');
+      var h = el('h4', 'sj-dlg-' + g[1], g[0] + ' (' + g[2].length + ')');
+      sec.append(h);
+      g[2].forEach(function (j) {
+        var it = el('div', 'sj-dlg-i');
+        it.append(el('b', null, dateOf(j)), el('span', null, j.short || j.task), el('small', null, j.who || ''));
+        sec.append(it);
+      });
+      card.append(sec);
+    });
+    if (!any) card.append(el('p', 'sj-dlg-none', 'No tasks recorded for this property in the last two weeks.'));
+    detailEl.replaceChildren(card);
+    detailEl.hidden = false;
+    document.body.style.overflow = 'hidden';
+    x.focus();
+  }
+
   dash.draw('tiles', function (box) {
     var rows = rowsOf(box.dataset.source);
     box.replaceChildren();
@@ -668,6 +743,12 @@ html, body { margin: 0; background: #1C1C1A; }
       if (r.planned) pills.append(el('span', 'sj-pill p', r.planned + ' planned'));
       if (r.done) pills.append(el('span', 'sj-pill d', r.done + ' done'));
       t.append(el('div', 'sj-p-n', r.property), el('div', 'sj-p-t', (r.city ? r.city + ' · ' : '') + r.ago), bar, el('div', 'sj-p-ph', r.photos_14d + (r.photos_14d === 1 ? ' photo' : ' photos')), pills);
+      t.tabIndex = 0;
+      t.setAttribute('role', 'button');
+      t.setAttribute('aria-label', 'Show tasks for ' + r.property);
+      t.classList.add('sj-click');
+      t.addEventListener('click', function () { openDetail(r); });
+      t.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDetail(r); } });
       box.append(t);
     });
   });
