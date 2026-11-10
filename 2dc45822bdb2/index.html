@@ -164,6 +164,14 @@ html, body { margin: 0; background: #1C1C1A; }
 .fl-tm .n.over, .fl-tm .n.under { color:var(--bo); }
 .fl-tm .n.doing { color:var(--or); }
 .fl-tm small { display:block; font-size:.85rem; color:var(--mute); }
+/* feedback buttons: switch off with FB.on = false in the fl-list script */
+.fb-go { grid-column:2 / -1; justify-self:start; margin:.35rem 0 0; padding:.45rem .9rem; font:600 .9rem var(--font-anthropic-sans); color:var(--bo); background:#fff; border:1.5px solid var(--bo); border-radius:999px; cursor:pointer; }
+.fb-go:focus-visible, .fb-chip:focus-visible { outline:3px solid var(--or); outline-offset:2px; }
+.fb-opts { grid-column:2 / -1; display:flex; flex-wrap:wrap; gap:.5rem; margin:.4rem 0 0; }
+.fb-chip { display:inline-block; padding:.6rem 1rem; font:700 .95rem var(--font-anthropic-sans); color:#fff; background:var(--ch); border-radius:999px; text-decoration:none; }
+.fb-chip.n { background:var(--tan); }
+.fb-opts[hidden], .fb-add[hidden] { display:none; }
+.fb-add { display:inline-block; margin:1rem 0 0; padding:.6rem 1.1rem; font:700 .95rem var(--font-anthropic-sans); color:var(--bo); background:#fff; border:2px solid var(--bo); border-radius:999px; text-decoration:none; }
 .fl-btn { margin:.9rem 0 0; padding:.7rem 1.3rem; font:700 1rem var(--font-anthropic-sans); color:#fff; background:var(--bo); border:0; border-radius:999px; cursor:pointer; }
 .fl-btn::after { content:" \25BE"; }
 .fl-btn[aria-expanded="true"]::after { content:" \25B4"; }
@@ -222,6 +230,7 @@ html, body { margin: 0; background: #1C1C1A; }
   <p class="fl-sum" data-draw="fl-summary">—</p>
   <p class="fl-asof">Time is estimated from first to last CompanyCam photo at the property. Standards are starters and can be adjusted.</p>
   <div data-draw="fl-list" data-source="listrows"></div>
+  <a class="fb-add" data-fb-add href="#" hidden>+ Add a job (text Luis)</a>
   <div class="fl-lg" aria-label="Legend">
     <span><i class="fl-box done">&#10003;</i>done</span>
     <span><i class="fl-box doing"></i>in progress</span>
@@ -844,7 +853,10 @@ dash.draw('fl-summary', el => {
   if (urg) { el.append(', '); el.append(Object.assign(document.createElement('b'), { className: 'u', textContent: urg + ' urgent' })); }
   el.append('. As of ' + (r.data[0] ? fmtD(parseD(r.data[0].latest)) : '') + '.');
 });
+const FB = { on: true, to: '' };  /* on: false hides every feedback button. to: Luis's number for the text. */
+const fbLink = (text) => 'sms:' + FB.to + '?&body=' + encodeURIComponent(text);
 dash.draw('fl-list', el => {
+  document.querySelectorAll('[data-fb-add]').forEach(a => { a.hidden = !FB.on; a.href = fbLink('Field list, add a job: '); });
   const r = dash.data('listrows');
   if (r.status !== 'ok') { el.replaceChildren(); return; }
   const rank = { urgent: 0, doing: 1, open: 2, done: 3, planned: 4 };
@@ -867,6 +879,16 @@ dash.draw('fl-list', el => {
         n.dataset.source = 'listrows'; n.dataset.field = 'mins'; n.dataset.where = 'id=' + x.id;
         const note = x.state === 'doing' ? 'so far, from photos' : x.std !== '' ? 'est. · standard ' + fmtMin(x.std) : 'est. · no standard yet';
         tm.append(n, mk('small', '', note)); row.append(tm);
+      }
+      if (FB.on) {
+        const go = mk('button', 'fb-go', 'Change'); go.type = 'button'; go.setAttribute('aria-expanded', 'false');
+        const opts = mk('div', 'fb-opts'); opts.hidden = true;
+        const base = 'Field list, ' + p + ', ' + x.title + ': ';
+        [['Done', 'done.'], ['Not needed', 'not needed, remove it.'], ['Wrong', 'this is wrong. '], ['Add note', 'note: ']].forEach(([lab, msg], i) => {
+          const a = mk('a', 'fb-chip' + (i === 3 ? ' n' : ''), lab); a.href = fbLink(base + msg); opts.append(a);
+        });
+        go.addEventListener('click', () => { opts.hidden = !opts.hidden; go.setAttribute('aria-expanded', String(!opts.hidden)); });
+        row.append(go, opts);
       }
       sec.append(row);
     }
