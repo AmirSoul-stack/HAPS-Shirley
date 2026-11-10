@@ -1,0 +1,1272 @@
+{
+ "jobs": [
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-26",
+   "property": "1375 Sage",
+   "who": "Rhys",
+   "task": "Met Pacific Sheet Metal on site to look at the furnace blower motor.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j01",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-26",
+   "property": "1375 Sage",
+   "who": "Rhys",
+   "task": "Find someone to seal the bedroom windows and test air quality (guest reported poor air).",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j02",
+   "urgent": false,
+   "short": "Seal bedroom windows and test air quality"
+  },
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-26",
+   "property": "1375 Sage",
+   "who": "Pacific Sheet Metal",
+   "task": "Furnace blower motor: repair not confirmed. Install tentatively Nov 18.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j03",
+   "urgent": false,
+   "short": "Furnace blower motor: install tentatively Nov 18"
+  },
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-26",
+   "property": "210 S W End",
+   "who": "Rhys",
+   "task": "Walkthrough photos taken at 210, 795 AVR, 1375 Sage and 1465 Red Butte.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j04",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-26",
+   "property": "210 S W End",
+   "who": "Belmont Clean+Restore",
+   "task": "Cleaning completed.",
+   "status": "Done",
+   "source": "Gmail",
+   "id": "j05",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-27",
+   "end": "2026-10-27",
+   "property": "749 Holden",
+   "who": "Rhys",
+   "task": "Stone around the house cleaned.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j06",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-27",
+   "end": "2026-10-27",
+   "property": "749 Holden",
+   "who": "Belmont Clean+Restore",
+   "task": "Cleaning, 1:00 to 3:00 PM.",
+   "status": "Done",
+   "source": "Calendar",
+   "id": "j07",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-27",
+   "end": "2026-10-27",
+   "property": "Avanti Chalet",
+   "who": "Rhys",
+   "task": "Property walk and photos for the transition.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j08",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-27",
+   "end": "2026-10-27",
+   "property": "Ritz Unit 402",
+   "who": "Rhys",
+   "task": "Property photos taken.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j09",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-27",
+   "end": "2026-10-29",
+   "property": "795 AVR",
+   "who": "Jorge",
+   "task": "Floors cleaned, stains removed, pressure-washed (front done Oct 27, rest Oct 29).",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j10",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-28",
+   "end": "2026-10-28",
+   "property": "749 Holden",
+   "who": "Jorge",
+   "task": "Gutters cleared of frozen leaves, stone and floors washed, water tap adjusted, ice machine cleaned and defrosted.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j11",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-28",
+   "end": "2026-10-28",
+   "property": "681 Mountain Laurel",
+   "who": "Rhys",
+   "task": "Property photos taken.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j12",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-29",
+   "end": "2026-10-29",
+   "property": "Team",
+   "who": "Luis, Yolanda",
+   "task": "Meeting with Yolanda, 4:00 PM. Her CompanyCam login shows as Irma and has one photo (795 AVR).",
+   "status": "Done",
+   "source": "Calendar",
+   "id": "j13",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-29",
+   "end": "2026-10-29",
+   "property": "1375 Sage",
+   "who": "Gotcha Covered (Phantom Screens)",
+   "task": "Signed quote received. Decide how to proceed; installs run April to October.",
+   "status": "Pending",
+   "source": "Gmail",
+   "id": "j14",
+   "urgent": false,
+   "short": "Phantom Screens quote signed: decide next step"
+  },
+  {
+   "date": "2026-10-30",
+   "end": "2026-10-30",
+   "property": "1465 Red Butte",
+   "who": "Jorge",
+   "task": "Gardens and roof cleared of leaves, gutters cleaned, Jeep washed, garage and bikes organized.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j15",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-30",
+   "end": "2026-10-30",
+   "property": "174 Twining Flats",
+   "who": "Jorge",
+   "task": "Jacuzzi found open and a door open with items inside. Someone had been in. Needs a follow-up.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j16",
+   "urgent": true,
+   "short": "Jacuzzi and a door found open; someone had been in"
+  },
+  {
+   "date": "2026-10-30",
+   "end": "2026-10-30",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Trash taken out, mail checked, bins put back.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j17",
+   "urgent": false
+  },
+  {
+   "date": "2026-10-26",
+   "end": "2026-10-30",
+   "property": "Property not named",
+   "who": "RAM Pest Control",
+   "task": "Completed service visits (emails Oct 26 and Oct 30). Property not named in the notices.",
+   "status": "Done",
+   "source": "Gmail",
+   "id": "j18",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "795 AVR",
+   "who": "Kyle",
+   "task": "Replaced a hydration bladder, reattached the right dryer vent (it was venting behind the dryer), stored Dyson filters in the garage.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j19",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "795 AVR",
+   "who": "Belmont Clean+Restore",
+   "task": "Cleaning done. Dryer vent cleaning was booked 4:00 to 6:00 PM; completion not confirmed.",
+   "status": "Done",
+   "source": "Calendar",
+   "id": "j20",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "1465 Red Butte",
+   "who": "Jorge",
+   "task": "Bikes washed, balcony and gardens cleaned.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j21",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "1465 Red Butte",
+   "who": "Jorge",
+   "task": "A/C filters are dirty and need replacing.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j22",
+   "urgent": false,
+   "short": "Replace dirty A/C filters"
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "6770 Castle Creek",
+   "who": "Bryce",
+   "task": "Boiler visit, 11:00 AM. Kyle logged one photo there. Result not recorded.",
+   "status": "Pending",
+   "source": "Calendar",
+   "id": "j23",
+   "urgent": false,
+   "short": "Boiler visit: confirm result with Bryce"
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "210 S W End",
+   "who": "Bryce, Kyle",
+   "task": "Look at the leaking shower sprayer, 1:30 PM. Result not recorded.",
+   "status": "Pending",
+   "source": "Calendar",
+   "id": "j24",
+   "urgent": false,
+   "short": "Leaking shower sprayer: confirm result"
+  },
+  {
+   "date": "2026-11-02",
+   "end": "2026-11-02",
+   "property": "366 Hanson Ranch",
+   "who": "Belmont Clean+Restore",
+   "task": "Cleaning booked 11:30 AM.",
+   "status": "Pending",
+   "source": "Calendar",
+   "id": "j25",
+   "urgent": false,
+   "short": "Cleaning booked: confirm it happened"
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "681 Mountain Laurel",
+   "who": "Belmont Clean+Restore",
+   "task": "Cleaning, 4:00 PM.",
+   "status": "Done",
+   "source": "Calendar",
+   "id": "j26",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Washer and dryer lines cleaned.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j27",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Living room ceiling smoke alarm is beeping; needs new batteries.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j28",
+   "urgent": false,
+   "short": "Living room smoke alarm beeping: new batteries"
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "210 S W End",
+   "who": "Jorge",
+   "task": "Cleaned the air conditioner area and the gardens, front and back.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j29",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "916 Pine Crest",
+   "who": "Kyle",
+   "task": "Driveway snowmelt boiler checked with thermal imaging; radiant lines heating up; water feature full of rain water.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j30",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "1375 Sage",
+   "who": "Kyle",
+   "task": "Guests' bikes secured and moved to the Carbondale storage unit.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j31",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "1375 Sage",
+   "who": "Window repair company",
+   "task": "Window repair appointment, 3:00 PM. Window check was still under way Nov 5; follow-up not confirmed.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j32",
+   "urgent": false,
+   "short": "Window repair: confirm follow-up"
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-03",
+   "property": "450 W Tiehack",
+   "who": "Aspen WaterWise",
+   "task": "Visit planned 2:00 to 4:00 PM. Confirm.",
+   "status": "Pending",
+   "source": "Calendar",
+   "id": "j33",
+   "urgent": false,
+   "short": "WaterWise visit: confirm it happened"
+  },
+  {
+   "date": "2026-11-04",
+   "end": "2026-11-04",
+   "property": "1375 Sage",
+   "who": "Mr. Appliance (Terrence)",
+   "task": "Washer inspection, 4:15 to 6:15 PM.",
+   "status": "Done",
+   "source": "Calendar",
+   "id": "j34",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-04",
+   "end": "2026-11-04",
+   "property": "749 Holden",
+   "who": "Jorge, Damaris",
+   "task": "Front and lower areas cleaned, leaf bags filled.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j35",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-04",
+   "end": "2026-11-04",
+   "property": "749 Holden",
+   "who": "Jorge",
+   "task": "Back area not finished (hose broke). Floor needs a cement fill.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j36",
+   "urgent": false,
+   "short": "Back area unfinished (hose broke); floor needs cement"
+  },
+  {
+   "date": "2026-11-04",
+   "end": "2026-11-04",
+   "property": "366 Hanson Ranch",
+   "who": "Mr. Appliance",
+   "task": "Service call completed.",
+   "status": "Done",
+   "source": "Gmail",
+   "id": "j37",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-04",
+   "end": "2026-11-04",
+   "property": "Carbondale",
+   "who": "Rod Construction (Victor)",
+   "task": "Repair proposal sent Nov 4. Waiting for the client to sign.",
+   "status": "Pending",
+   "source": "Gmail",
+   "id": "j38",
+   "urgent": false,
+   "short": "Repair proposal sent: waiting for client signature"
+  },
+  {
+   "date": "2026-11-05",
+   "end": "2026-11-05",
+   "property": "1375 Sage",
+   "who": "Jorge",
+   "task": "Sink tap tightened, burned-out bulbs replaced, gas lines checked for the outdoor fireplace.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j39",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-05",
+   "end": "2026-11-05",
+   "property": "210 S W End",
+   "who": "Damaris",
+   "task": "Deep clean: master bedroom cobwebs, floors, bathrooms.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j40",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-05",
+   "end": "2026-11-05",
+   "property": "1465 Red Butte",
+   "who": "Jorge",
+   "task": "Bathroom cabinets colored.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j41",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-05",
+   "end": "2026-11-05",
+   "property": "1465 Red Butte",
+   "who": "Jorge",
+   "task": "Two light bulbs not working. Jorge will look at the house or buy replacements.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j42",
+   "urgent": false,
+   "short": "Two bulbs not working: find or buy"
+  },
+  {
+   "date": "2026-11-05",
+   "end": "2026-11-05",
+   "property": "450 W Tiehack",
+   "who": "Mr. Appliance",
+   "task": "Service call completed (receipt received Nov 5).",
+   "status": "Done",
+   "source": "Gmail",
+   "id": "j43",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-06",
+   "end": "2026-11-06",
+   "property": "450 W Tiehack",
+   "who": "Amilkar (DOAM Electrical)",
+   "task": "Heat tape checked, no issues found. The subpanel to activate it is in the crawl space (per Luis, Nov 9).",
+   "status": "Done",
+   "source": "Luis",
+   "id": "j44",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-06",
+   "end": "2026-11-06",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Both vehicles cleaned inside and out, tire marks, shoe areas and walls cleaned, bins emptied.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j45",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-06",
+   "end": "2026-11-06",
+   "property": "174 Twining Flats",
+   "who": "Jorge",
+   "task": "Trash out, mail checked, keys and papers left in place.",
+   "status": "Done",
+   "source": "CompanyCam",
+   "id": "j46",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-06",
+   "end": "2026-11-06",
+   "property": "210 S W End",
+   "who": "Jorge",
+   "task": "Curtain hung but not secure; other items needed. Jorge noted it needs explaining to Riz.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j47",
+   "urgent": false,
+   "short": "Curtain not secure; needs other items"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Driveway pressure-wash and sealing proposal approved Nov 9 (per Rhys text). Jorge assigned.",
+   "status": "Done",
+   "source": "Google Voice",
+   "id": "j48",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-03",
+   "end": "2026-11-09",
+   "property": "88 Holland Hills",
+   "who": "Rod Construction, Dillon",
+   "task": "Deck quote: Rod Construction asked about engineered drawings, railing type and deck boards. No reply yet.",
+   "status": "Pending",
+   "source": "Gmail",
+   "id": "j49",
+   "urgent": false,
+   "short": "Deck quote questions: no reply yet"
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "1465 Red Butte",
+   "who": "Delivery",
+   "task": "Grill cover arrives today; fireplace cover Nov 18. Jorge to measure.",
+   "status": "Planned",
+   "source": "Gmail",
+   "id": "j50",
+   "urgent": false,
+   "short": "Grill cover arrives today; fireplace cover Nov 18"
+  },
+  {
+   "date": "2026-11-13",
+   "end": "2026-11-13",
+   "property": "Avanti Chalet",
+   "who": "HAPS",
+   "task": "Transition out ends. Handover package and final walkthrough still to do.",
+   "status": "Planned",
+   "source": "Notes",
+   "id": "j51",
+   "urgent": false,
+   "short": "Transition ends: handover and final walkthrough"
+  },
+  {
+   "date": "2026-11-13",
+   "end": "2026-11-25",
+   "property": "795 AVR",
+   "who": "Seth and Jodi",
+   "task": "Client stay Nov 13 to 25. Waiting on flight details.",
+   "status": "Planned",
+   "source": "Calendar",
+   "id": "j52",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-18",
+   "end": "2026-11-18",
+   "property": "1375 Sage",
+   "who": "Pacific Sheet Metal",
+   "task": "Blower motor install, tentative.",
+   "status": "Planned",
+   "source": "Notes",
+   "id": "j53",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-24",
+   "end": "2026-11-30",
+   "property": "681 Mountain Laurel",
+   "who": "Savanna",
+   "task": "Guest stay Nov 24 to 30 (owner arrives Nov 30). Thanksgiving week prep.",
+   "status": "Planned",
+   "source": "Notes",
+   "id": "j54",
+   "urgent": false
+  },
+  {
+   "date": "2026-11-09",
+   "end": "2026-11-09",
+   "property": "681 Mountain Laurel",
+   "who": "Jorge",
+   "task": "Driveway pressure wash in progress (first photo 10:48 AM, 47 min so far). Stone is very black; sealant goes on after the wash.",
+   "status": "Pending",
+   "source": "CompanyCam",
+   "id": "j55",
+   "urgent": false,
+   "short": "Driveway pressure wash in progress; seal after"
+  }
+ ],
+ "activity": [
+  {
+   "date": "2026-10-26",
+   "property": "1375 Sage",
+   "person": "Rhys",
+   "photos": 16,
+   "first": "11:05 AM",
+   "last": "12:43 PM"
+  },
+  {
+   "date": "2026-10-26",
+   "property": "1465 Red Butte",
+   "person": "Rhys",
+   "photos": 21,
+   "first": "11:56 AM",
+   "last": "12:20 PM"
+  },
+  {
+   "date": "2026-10-26",
+   "property": "210 S W End",
+   "person": "Rhys",
+   "photos": 15,
+   "first": "4:26 PM",
+   "last": "4:36 PM"
+  },
+  {
+   "date": "2026-10-26",
+   "property": "681 Mountain Laurel",
+   "person": "Jorge",
+   "photos": 3,
+   "first": "11:58 AM",
+   "last": "11:59 AM"
+  },
+  {
+   "date": "2026-10-26",
+   "property": "795 AVR",
+   "person": "Jorge",
+   "photos": 10,
+   "first": "2:00 PM",
+   "last": "3:45 PM"
+  },
+  {
+   "date": "2026-10-26",
+   "property": "795 AVR",
+   "person": "Rhys",
+   "photos": 20,
+   "first": "1:38 PM",
+   "last": "3:34 PM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "174 Twining Flats",
+   "person": "Jorge",
+   "photos": 9,
+   "first": "9:13 AM",
+   "last": "11:27 AM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "210 S W End",
+   "person": "Damaris",
+   "photos": 4,
+   "first": "10:26 AM",
+   "last": "1:22 PM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "749 Holden",
+   "person": "Rhys",
+   "photos": 46,
+   "first": "10:46 AM",
+   "last": "12:20 PM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "795 AVR",
+   "person": "Jorge",
+   "photos": 33,
+   "first": "1:27 PM",
+   "last": "5:53 PM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "Avanti Chalet",
+   "person": "Rhys",
+   "photos": 15,
+   "first": "3:18 PM",
+   "last": "3:50 PM"
+  },
+  {
+   "date": "2026-10-27",
+   "property": "Ritz Unit 402",
+   "person": "Rhys",
+   "photos": 9,
+   "first": "1:53 PM",
+   "last": "2:06 PM"
+  },
+  {
+   "date": "2026-10-28",
+   "property": "681 Mountain Laurel",
+   "person": "Rhys",
+   "photos": 13,
+   "first": "2:32 PM",
+   "last": "2:35 PM"
+  },
+  {
+   "date": "2026-10-28",
+   "property": "749 Holden",
+   "person": "Jorge",
+   "photos": 53,
+   "first": "8:33 AM",
+   "last": "4:24 PM"
+  },
+  {
+   "date": "2026-10-29",
+   "property": "681 Mountain Laurel",
+   "person": "Damaris",
+   "photos": 10,
+   "first": "2:24 PM",
+   "last": "2:26 PM"
+  },
+  {
+   "date": "2026-10-29",
+   "property": "795 AVR",
+   "person": "Yolanda",
+   "photos": 1,
+   "first": "3:56 PM",
+   "last": "3:56 PM"
+  },
+  {
+   "date": "2026-10-29",
+   "property": "795 AVR",
+   "person": "Jorge",
+   "photos": 36,
+   "first": "12:34 PM",
+   "last": "5:49 PM"
+  },
+  {
+   "date": "2026-10-30",
+   "property": "1465 Red Butte",
+   "person": "Jorge",
+   "photos": 95,
+   "first": "9:06 AM",
+   "last": "5:28 PM"
+  },
+  {
+   "date": "2026-10-30",
+   "property": "174 Twining Flats",
+   "person": "Jorge",
+   "photos": 30,
+   "first": "8:32 AM",
+   "last": "6:32 PM"
+  },
+  {
+   "date": "2026-10-30",
+   "property": "681 Mountain Laurel",
+   "person": "Jorge",
+   "photos": 5,
+   "first": "9:24 AM",
+   "last": "5:52 PM"
+  },
+  {
+   "date": "2026-10-30",
+   "property": "795 AVR",
+   "person": "Jorge",
+   "photos": 4,
+   "first": "6:57 PM",
+   "last": "7:02 PM"
+  },
+  {
+   "date": "2026-11-02",
+   "property": "1465 Red Butte",
+   "person": "Jorge",
+   "photos": 29,
+   "first": "11:07 AM",
+   "last": "4:38 PM"
+  },
+  {
+   "date": "2026-11-02",
+   "property": "6770 Castle Creek",
+   "person": "Kyle",
+   "photos": 1,
+   "first": "10:25 AM",
+   "last": "10:25 AM"
+  },
+  {
+   "date": "2026-11-02",
+   "property": "795 AVR",
+   "person": "Jorge",
+   "photos": 10,
+   "first": "9:36 AM",
+   "last": "9:39 AM"
+  },
+  {
+   "date": "2026-11-02",
+   "property": "795 AVR",
+   "person": "Kyle",
+   "photos": 13,
+   "first": "1:23 PM",
+   "last": "3:38 PM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "1375 Sage",
+   "person": "Kyle",
+   "photos": 2,
+   "first": "11:46 AM",
+   "last": "12:56 PM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "158 W Sopris Creek",
+   "person": "Damaris",
+   "photos": 1,
+   "first": "10:07 AM",
+   "last": "10:07 AM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "174 Twining Flats",
+   "person": "Jorge",
+   "photos": 14,
+   "first": "3:58 PM",
+   "last": "4:16 PM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "210 S W End",
+   "person": "Jorge",
+   "photos": 44,
+   "first": "8:55 AM",
+   "last": "3:37 PM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "681 Mountain Laurel",
+   "person": "Jorge",
+   "photos": 9,
+   "first": "10:31 AM",
+   "last": "10:55 AM"
+  },
+  {
+   "date": "2026-11-03",
+   "property": "916 Pine Crest",
+   "person": "Kyle",
+   "photos": 12,
+   "first": "10:15 AM",
+   "last": "2:56 PM"
+  },
+  {
+   "date": "2026-11-04",
+   "property": "749 Holden",
+   "person": "Damaris",
+   "photos": 14,
+   "first": "1:13 PM",
+   "last": "4:43 PM"
+  },
+  {
+   "date": "2026-11-04",
+   "property": "749 Holden",
+   "person": "Jorge",
+   "photos": 49,
+   "first": "11:00 AM",
+   "last": "4:43 PM"
+  },
+  {
+   "date": "2026-11-04",
+   "property": "795 AVR",
+   "person": "Kyle",
+   "photos": 6,
+   "first": "12:49 PM",
+   "last": "5:14 PM"
+  },
+  {
+   "date": "2026-11-05",
+   "property": "1375 Sage",
+   "person": "Jorge",
+   "photos": 23,
+   "first": "1:02 PM",
+   "last": "4:40 PM"
+  },
+  {
+   "date": "2026-11-05",
+   "property": "1465 Red Butte",
+   "person": "Jorge",
+   "photos": 9,
+   "first": "2:14 PM",
+   "last": "5:27 PM"
+  },
+  {
+   "date": "2026-11-05",
+   "property": "210 S W End",
+   "person": "Damaris",
+   "photos": 9,
+   "first": "9:13 AM",
+   "last": "3:30 PM"
+  },
+  {
+   "date": "2026-11-06",
+   "property": "1465 Red Butte",
+   "person": "Jorge",
+   "photos": 2,
+   "first": "2:05 PM",
+   "last": "2:10 PM"
+  },
+  {
+   "date": "2026-11-06",
+   "property": "174 Twining Flats",
+   "person": "Jorge",
+   "photos": 5,
+   "first": "8:32 AM",
+   "last": "4:18 PM"
+  },
+  {
+   "date": "2026-11-06",
+   "property": "210 S W End",
+   "person": "Jorge",
+   "photos": 5,
+   "first": "2:31 PM",
+   "last": "3:26 PM"
+  },
+  {
+   "date": "2026-11-06",
+   "property": "681 Mountain Laurel",
+   "person": "Jorge",
+   "photos": 40,
+   "first": "9:20 AM",
+   "last": "12:50 PM"
+  },
+  {
+   "date": "2026-11-09",
+   "property": "681 Mountain Laurel",
+   "person": "Jorge",
+   "photos": 4,
+   "first": "10:48 AM",
+   "last": "11:35 AM"
+  }
+ ],
+ "properties": [
+  {
+   "property": "1465 Red Butte",
+   "city": "",
+   "photos": 387,
+   "last_activity": "2026-11-06",
+   "days_quiet": 3,
+   "status": "Active",
+   "photos_14d": 156,
+   "days_worked": 5,
+   "crew": "Jorge, Rhys"
+  },
+  {
+   "property": "681 Mountain Laurel",
+   "city": "",
+   "photos": 221,
+   "last_activity": "2026-11-09",
+   "days_quiet": 0,
+   "status": "Active",
+   "photos_14d": 84,
+   "days_worked": 7,
+   "crew": "Damaris, Jorge, Rhys"
+  },
+  {
+   "property": "210 S W End",
+   "city": "",
+   "photos": 311,
+   "last_activity": "2026-11-06",
+   "days_quiet": 3,
+   "status": "Active",
+   "photos_14d": 77,
+   "days_worked": 5,
+   "crew": "Damaris, Jorge, Rhys"
+  },
+  {
+   "property": "174 Twining Flats",
+   "city": "",
+   "photos": 196,
+   "last_activity": "2026-11-06",
+   "days_quiet": 3,
+   "status": "Active",
+   "photos_14d": 58,
+   "days_worked": 4,
+   "crew": "Jorge"
+  },
+  {
+   "property": "1375 Sage",
+   "city": "",
+   "photos": 217,
+   "last_activity": "2026-11-05",
+   "days_quiet": 4,
+   "status": "Watch",
+   "photos_14d": 41,
+   "days_worked": 3,
+   "crew": "Jorge, Kyle, Rhys"
+  },
+  {
+   "property": "749 Holden",
+   "city": "",
+   "photos": 394,
+   "last_activity": "2026-11-04",
+   "days_quiet": 5,
+   "status": "Watch",
+   "photos_14d": 162,
+   "days_worked": 3,
+   "crew": "Damaris, Jorge, Rhys"
+  },
+  {
+   "property": "795 AVR",
+   "city": "",
+   "photos": 237,
+   "last_activity": "2026-11-04",
+   "days_quiet": 5,
+   "status": "Watch",
+   "photos_14d": 133,
+   "days_worked": 6,
+   "crew": "Irma, Jorge, Kyle, Rhys"
+  },
+  {
+   "property": "916 Pine Crest",
+   "city": "",
+   "photos": 194,
+   "last_activity": "2026-11-03",
+   "days_quiet": 6,
+   "status": "Watch",
+   "photos_14d": 12,
+   "days_worked": 1,
+   "crew": "Kyle"
+  },
+  {
+   "property": "158 W Sopris Creek",
+   "city": "",
+   "photos": 5,
+   "last_activity": "2026-11-03",
+   "days_quiet": 6,
+   "status": "Watch",
+   "photos_14d": 1,
+   "days_worked": 1,
+   "crew": "Damaris"
+  },
+  {
+   "property": "6770 Castle Creek",
+   "city": "",
+   "photos": 54,
+   "last_activity": "2026-11-02",
+   "days_quiet": 7,
+   "status": "Watch",
+   "photos_14d": 1,
+   "days_worked": 1,
+   "crew": "Kyle"
+  },
+  {
+   "property": "Avanti Chalet",
+   "city": "",
+   "photos": 530,
+   "last_activity": "2026-10-27",
+   "days_quiet": 13,
+   "status": "Watch",
+   "photos_14d": 15,
+   "days_worked": 1,
+   "crew": "Rhys"
+  },
+  {
+   "property": "Ritz Unit 402",
+   "city": "",
+   "photos": 231,
+   "last_activity": "2026-10-27",
+   "days_quiet": 13,
+   "status": "Watch",
+   "photos_14d": 9,
+   "days_worked": 1,
+   "crew": "Rhys"
+  },
+  {
+   "property": "1039 E Cooper",
+   "city": "",
+   "photos": 92,
+   "last_activity": "2026-10-22",
+   "days_quiet": 18,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "450 W Tiehack",
+   "city": "",
+   "photos": 206,
+   "last_activity": "2026-10-19",
+   "days_quiet": 21,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "Elkhorn Escape",
+   "city": "",
+   "photos": 84,
+   "last_activity": "2026-10-14",
+   "days_quiet": 26,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "31 White Peaks",
+   "city": "",
+   "photos": 7,
+   "last_activity": "2026-10-05",
+   "days_quiet": 35,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "319 Aspen Airport Business Center",
+   "city": "",
+   "photos": 11,
+   "last_activity": "2026-09-30",
+   "days_quiet": 40,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "426 W Hallam",
+   "city": "",
+   "photos": 117,
+   "last_activity": "2026-09-24",
+   "days_quiet": 46,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "108 W Hyman",
+   "city": "",
+   "photos": 14,
+   "last_activity": "2026-09-17",
+   "days_quiet": 53,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "1024 E Hopkins 17A",
+   "city": "",
+   "photos": 1,
+   "last_activity": "2026-09-02",
+   "days_quiet": 68,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "1024 E Hopkins",
+   "city": "",
+   "photos": 1,
+   "last_activity": "2026-08-28",
+   "days_quiet": 73,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "425 AVR",
+   "city": "",
+   "photos": 17,
+   "last_activity": "2026-08-28",
+   "days_quiet": 73,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  },
+  {
+   "property": "Kiki's",
+   "city": "",
+   "photos": 0,
+   "last_activity": "2026-06-01",
+   "days_quiet": 161,
+   "status": "Quiet",
+   "photos_14d": 0,
+   "days_worked": 0,
+   "crew": ""
+  }
+ ],
+ "team": [
+  {
+   "name": "Damaris",
+   "match": "Damaris",
+   "aliases": [],
+   "role": "Standard",
+   "account": "Active"
+  },
+  {
+   "name": "Kyle",
+   "match": "Kyle",
+   "aliases": [],
+   "role": "Manager",
+   "account": "Active"
+  },
+  {
+   "name": "Jorge",
+   "match": "Jorge",
+   "aliases": [],
+   "role": "Standard",
+   "account": "Active"
+  },
+  {
+   "name": "Yolanda",
+   "match": "Yolanda",
+   "aliases": [
+    "Irma"
+   ],
+   "role": "Standard",
+   "account": "Active"
+  },
+  {
+   "name": "Rhys",
+   "match": "Rhys",
+   "aliases": [],
+   "role": "Admin",
+   "account": "Active"
+  }
+ ],
+ "meta": {
+  "generated": "2026-11-10T05:12:10Z",
+  "as_of": "2026-11-09",
+  "voice_read": false,
+  "notes": [
+   "Google Voice was not read for this update."
+  ],
+  "non_properties": [
+   "Team",
+   "Property not named"
+  ]
+ }
+}
