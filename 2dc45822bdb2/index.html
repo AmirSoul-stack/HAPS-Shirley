@@ -506,17 +506,21 @@ html, body { margin: 0; background: #1C1C1A; }
   dash.calc('byprop', {
     inputs: ['properties', 'jobs'],
     title: 'Properties with job counts',
-    description: 'Each property with activity in the window (CompanyCam photos in the last 14 days, or a job), with photo activity and its done, open and planned job counts. Properties with nothing are left out.',
+    description: 'Each property with activity in the window (CompanyCam photos in the last 14 days, or a job), with photo activity and its done, open and planned job counts. Days since activity use the newest of the last photo or the last finished job. Properties with nothing are left out.',
     fn: function (properties, jobs) {
       var max = properties.reduce(function (m, p) { return Math.max(m, p.photos_14d || 0); }, 1);
+      var asOf = properties.reduce(function (m, p) { return p.last_activity && p.last_activity > m ? p.last_activity : m; }, '');
       var names = properties.map(function (p) { return p.property; });
       jobs.forEach(function (j) { if (names.indexOf(j.property) < 0) names.push(j.property); });
       var rows = names.map(function (n) {
         var p = properties.find(function (x) { return x.property === n; }) || {};
         var c = function (st) { return jobs.filter(function (j) { return j.property === n && j.status === st; }).length; };
-        var dq = p.days_quiet;
+        var lastDone = jobs.filter(function (j) { return j.property === n && j.status === 'Done'; }).map(function (j) { return j.end || j.date; }).filter(function (d) { return !asOf || d <= asOf; }).sort().pop();
+        var lastAct = [p.last_activity, lastDone].filter(Boolean).sort().pop();
+        var dq = (lastAct && asOf) ? Math.max(0, Math.round((Date.parse(asOf + 'T00:00:00Z') - Date.parse(lastAct + 'T00:00:00Z')) / 86400000)) : p.days_quiet;
+        var stat = lastAct ? (dq <= 3 ? 'Active' : dq <= 14 ? 'Watch' : 'Quiet') : (p.status || '');
         return {
-          property: n, city: p.city || '', status: p.status || '',
+          property: n, city: p.city || '', status: stat,
           photos_14d: p.photos_14d || 0, pct: Math.round((p.photos_14d || 0) / max * 100),
           ago: dq == null ? 'not in CompanyCam' : dq === 0 ? 'active today' : dq + (dq === 1 ? ' day ago' : ' days ago'),
           done: c('Done'), pending: c('Pending'), planned: c('Planned'), crew: p.crew || '', dq: dq == null ? 999 : dq
