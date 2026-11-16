@@ -17,5 +17,12 @@ key = hashlib.pbkdf2_hmac('sha256', pw.encode(), (user.strip().lower() + ':' + s
 iv = os.urandom(12)
 ct = AESGCM(key).encrypt(iv, raw, None)
 b = lambda x: base64.b64encode(x).decode()
-json.dump({'v': 1, 'salt': salt, 'iter': ITER, 'iv': b(iv), 'ct': b(ct)}, open(dst, 'w'))
+out = {'v': 1, 'salt': salt, 'iter': ITER, 'iv': b(iv), 'ct': b(ct)}
+# keep extra sign-ins (see shirley_adduser.py): they wrap this same key, so they stay valid
+try:
+    old = json.load(open(dst))
+    if old.get('wraps'): out['wraps'] = old['wraps']
+except Exception:
+    pass
+json.dump(out, open(dst, 'w'))
 print('encrypted', len(raw), 'bytes ->', dst)

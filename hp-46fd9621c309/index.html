@@ -976,10 +976,16 @@ document.querySelectorAll('[data-fl-toggle]').forEach(btn => {
       ev.preventDefault(); msg.textContent = 'Checking...';
       var user = form.elements.user.value, pw = form.elements.pw.value;
       derive(enc, user, pw).then(function(bits){
-        return open(enc, bits).then(function(d){
-          if (form.elements.keep.checked) { try { localStorage.setItem(KEY, unb64(bits)); } catch(e){} }
+        var finish = function(b2){ return open(enc, b2).then(function(d){
+          if (form.elements.keep.checked) { try { localStorage.setItem(KEY, unb64(b2)); } catch(e){} }
           form.elements.pw.value = ''; show(d);
-        });
+        }); };
+        var uname = user.trim().toLowerCase();
+        var w = (enc.wraps || []).filter(function(x){ return x.u === uname; })[0];
+        if (!w) return finish(bits);
+        return crypto.subtle.importKey('raw', bits, 'AES-GCM', false, ['decrypt']).then(function(k){
+          return crypto.subtle.decrypt({name:'AES-GCM', iv: b64(w.iv)}, k, b64(w.wk));
+        }).then(function(raw){ return finish(new Uint8Array(raw)); });
       }).catch(function(){ msg.textContent = 'Wrong username or password.'; });
     });
     var out = document.getElementById('signout');
