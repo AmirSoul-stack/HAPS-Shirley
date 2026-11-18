@@ -589,12 +589,12 @@ body.locked > *:not(#gate):not(script):not(style) { display:none; }
   dash.calc('done', {
     inputs: ['jobs'],
     title: 'Completed work',
-    description: 'Jobs marked Done, oldest first.',
+    description: 'Jobs marked Done, newest first.',
     fn: function (jobs) {
       var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
       var f = function (s) { return M[Number(s.slice(5, 7)) - 1] + ' ' + Number(s.slice(8, 10)); };
       return jobs.filter(function (j) { return j.status === 'Done'; })
-        .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; })
+        .sort(function (a, b) { var ka = a.end || a.date, kb = b.end || b.date; if (ka !== kb) return ka < kb ? 1 : -1; if (a.date !== b.date) return a.date < b.date ? 1 : -1; return (parseInt(String(b.id).replace(/\D/g, ''), 10) || 0) - (parseInt(String(a.id).replace(/\D/g, ''), 10) || 0); })
         .map(function (j) { return { id: j.id, when: j.end !== j.date ? f(j.date) + ' to ' + f(j.end) : f(j.date), property: j.property, who: j.who, task: j.task }; });
     }
   });
